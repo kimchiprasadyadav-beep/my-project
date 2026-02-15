@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raising Kriva — Turning One 🎂</title>
+<meta name="description" content="Kriva's first birthday keepsake & media kit. A Valentine baby turning one in Dubai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blush:#f9e4e0;--cream:#fdf8f4;--gold:#d4a853;--gold-light:#f0dba8;
+  --rose:#e8a0b4;--deep-rose:#c76b8a;--text:#4a3728;--text-light:#7a6555;
+  --white:#ffffff;--pink-gradient:linear-gradient(135deg,#fce4ec 0%,#fdf8f4 50%,#fff3e0 100%);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;line-height:1.7;font-weight:300}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:600;line-height:1.3}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;transition:background .3s,box-shadow .3s}
+nav.scrolled{background:rgba(253,248,244,.95);backdrop-filter:blur(10px);box-shadow:0 2px 20px rgba(0,0,0,.06)}
+nav .logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--deep-rose);font-weight:700}
+nav ul{list-style:none;display:flex;gap:1.5rem}
+nav a{text-decoration:none;color:var(--text-light);font-size:.85rem;font-weight:400;transition:color .3s;letter-spacing:.5px}
+nav a:hover{color:var(--deep-rose)}
+.nav-toggle{display:none;background:none;border:none;font-size:1.5rem;color:var(--deep-rose);cursor:pointer}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--pink-gradient);position:relative;overflow:hidden;padding:2rem}
+.hero-shapes{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-shapes .circle{position:absolute;border-radius:50%;opacity:.15}
+.hero-shapes .c1{width:400px;height:400px;background:var(--rose);top:-100px;right:-100px}
+.hero-shapes .c2{width:300px;height:300px;background:var(--gold-light);bottom:-80px;left:-80px}
+.hero-shapes .c3{width:200px;height:200px;background:var(--deep-rose);top:40%;left:10%;opacity:.08}
+.hero-shapes .c4{width:150px;height:150px;background:var(--gold);bottom:20%;right:15%;opacity:.1}
+.hero-shapes .heart{position:absolute;opacity:.07;font-size:8rem;color:var(--deep-rose);top:15%;left:5%;animation:floatHeart 6s ease-in-out infinite}
+.hero-shapes .heart2{position:absolute;opacity:.05;font-size:5rem;color:var(--rose);bottom:25%;right:8%;animation:floatHeart 8s ease-in-out infinite 2s}
+@keyframes floatHeart{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-20px) rotate(5deg)}}
+.hero-avatar{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:4rem;margin-bottom:2rem;box-shadow:0 10px 40px rgba(200,107,138,.2);position:relative;z-index:1}
+.hero h1{font-size:clamp(3rem,8vw,5.5rem);color:var(--deep-rose);position:relative;z-index:1;letter-spacing:-1px}
+.hero h1 span{display:block;font-size:clamp(1.2rem,3vw,1.6rem);color:var(--gold);font-family:'Poppins',sans-serif;font-weight:300;letter-spacing:4px;margin-top:.5rem}
+.hero-tagline{font-size:clamp(1rem,2.5vw,1.3rem);color:var(--text-light);margin-top:1.5rem;max-width:500px;position:relative;z-index:1;font-style:italic;font-family:'Playfair Display',serif}
+.hero-badge{display:inline-block;margin-top:2rem;padding:.6rem 1.8rem;border:1.5px solid var(--gold);border-radius:50px;color:var(--gold);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;position:relative;z-index:1}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:1;animation:bounce 2s infinite}
+.hero-scroll a{color:var(--rose);text-decoration:none;font-size:1.5rem}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* CONFETTI CANVAS */
+#confetti-canvas{position:absolute;inset:0;pointer-events:none;z-index:0}
+
+/* SECTIONS */
+section{padding:5rem 2rem}
+.section-title{text-align:center;margin-bottom:3rem}
+.section-title h2{font-size:clamp(2rem,5vw,2.8rem);color:var(--deep-rose)}
+.section-title p{color:var(--text-light);margin-top:.5rem;font-size:.95rem}
+.section-title .divider{width:60px;height:3px;background:linear-gradient(90deg,var(--rose),var(--gold));margin:1rem auto 0;border-radius:2px}
+
+/* ABOUT */
+.about{background:var(--white)}
+.about-content{max-width:800px;margin:0 auto;text-align:center}
+.about-content p{margin-bottom:1.5rem;font-size:1.05rem;color:var(--text-light)}
+.about-content .highlight{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--deep-rose);font-style:italic;padding:1.5rem 0;border-top:1px solid var(--blush);border-bottom:1px solid var(--blush);margin:2rem 0}
+.about-tags{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:2rem}
+.about-tags span{padding:.5rem 1.2rem;background:var(--blush);border-radius:50px;font-size:.8rem;color:var(--deep-rose);letter-spacing:.5px}
+
+/* TIMELINE */
+.timeline-section{background:var(--pink-gradient)}
+.timeline{max-width:700px;margin:0 auto;position:relative;padding-left:40px}
+.timeline::before{content:'';position:absolute;left:15px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--rose),var(--gold))}
+.timeline-item{position:relative;margin-bottom:2.5rem;padding-left:2rem}
+.timeline-item::before{content:'';position:absolute;left:-33px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--white);border:3px solid var(--rose);z-index:1}
+.timeline-item .date{font-size:.8rem;color:var(--gold);font-weight:500;letter-spacing:1px;text-transform:uppercase}
+.timeline-item h3{font-size:1.3rem;color:var(--deep-rose);margin:.3rem 0}
+.timeline-item p{color:var(--text-light);font-size:.95rem}
+.timeline-item .emoji{font-size:1.5rem;margin-bottom:.3rem;display:block}
+
+/* GALLERY */
+.gallery-section{background:var(--white)}
+.gallery-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;justify-items:center}
+.gallery-grid blockquote{max-width:400px;width:100%}
+
+/* STATS */
+.stats-section{background:linear-gradient(135deg,var(--deep-rose),#a05070);color:var(--white);text-align:center}
+.stats-section .section-title h2{color:var(--white)}
+.stats-section .section-title p{color:rgba(255,255,255,.7)}
+.stats-section .section-title .divider{background:linear-gradient(90deg,var(--gold-light),var(--white))}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;max-width:900px;margin:0 auto 3rem}
+.stat-card{padding:2rem;border-radius:16px;background:rgba(255,255,255,.1);backdrop-filter:blur(10px)}
+.stat-card .number{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700}
+.stat-card .label{font-size:.85rem;opacity:.8;margin-top:.3rem}
+.audience-info{max-width:700px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.audience-card{background:rgba(255,255,255,.08);padding:1.5rem;border-radius:12px;text-align:left}
+.audience-card h4{font-size:1rem;margin-bottom:.8rem;color:var(--gold-light)}
+.audience-card li{list-style:none;font-size:.9rem;opacity:.85;padding:.2rem 0}
+
+/* COLLABS */
+.collabs{background:var(--cream)}
+.collab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;max-width:1000px;margin:0 auto}
+.collab-card{background:var(--white);padding:2rem;border-radius:16px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.04);transition:transform .3s}
+.collab-card:hover{transform:translateY(-4px)}
+.collab-card .icon{font-size:2.5rem;margin-bottom:1rem}
+.collab-card h3{font-size:1.1rem;color:var(--deep-rose);margin-bottom:.5rem}
+.collab-card p{font-size:.85rem;color:var(--text-light)}
+.offerings{max-width:700px;margin:3rem auto 0;text-align:center}
+.offerings h3{font-size:1.5rem;color:var(--deep-rose);margin-bottom:1.5rem}
+.offering-tags{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+.offering-tags span{padding:.7rem 1.5rem;border:1.5px solid var(--rose);border-radius:50px;font-size:.85rem;color:var(--deep-rose);transition:all .3s}
+.offering-tags span:hover{background:var(--rose);color:var(--white)}
+
+/* CONTACT */
+.contact{background:var(--white);text-align:center}
+.contact-box{max-width:600px;margin:0 auto;padding:3rem;background:var(--pink-gradient);border-radius:24px}
+.contact-box p{color:var(--text-light);margin-bottom:2rem;font-size:1rem}
+.contact-btn{display:inline-block;padding:1rem 3rem;background:linear-gradient(135deg,var(--deep-rose),var(--rose));color:var(--white);text-decoration:none;border-radius:50px;font-weight:500;font-size:1rem;letter-spacing:.5px;transition:transform .3s,box-shadow .3s}
+.contact-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(200,107,138,.3)}
+.contact-social{margin-top:2rem;display:flex;gap:1rem;justify-content:center}
+.contact-social a{display:flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;border:1.5px solid var(--rose);border-radius:50px;text-decoration:none;color:var(--deep-rose);font-size:.85rem;transition:all .3s}
+.contact-social a:hover{background:var(--rose);color:var(--white)}
+
+/* FOOTER */
+footer{text-align:center;padding:3rem 2rem;background:var(--cream);color:var(--text-light);font-size:.85rem}
+footer a{color:var(--deep-rose);text-decoration:none}
+footer .heart{color:var(--rose);animation:pulse 1.5s ease infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+
+/* FADE IN ANIMATION */
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(253,248,244,.98);flex-direction:column;padding:1.5rem 2rem;gap:1rem;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+  nav ul.open{display:flex}
+  .nav-toggle{display:block}
+  .hero-avatar{width:120px;height:120px;font-size:3rem}
+  section{padding:3.5rem 1.5rem}
+  .audience-info{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .timeline{padding-left:30px}
+  .timeline::before{left:10px}
+  .timeline-item::before{left:-27px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="logo">Raising Kriva</div>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#milestones">Milestones</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#stats">Media Kit</a></li>
+    <li><a href="#collabs">Collabs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <canvas id="confetti-canvas"></canvas>
+  <div class="hero-shapes">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+    <div class="circle c4"></div>
+    <div class="heart">♥</div>
+    <div class="heart2">♥</div>
+  </div>
+  <div class="hero-avatar">👶🏻</div>
+  <h1>Kriva<span>Turning One 🎂</span></h1>
+  <p class="hero-tagline">"Not fast. Not perfect. Just present."</p>
+  <div class="hero-badge">🌹 Valentine's Day Baby · Feb 14, 2025</div>
+  <div class="hero-scroll"><a href="#about">↓</a></div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-title fade-in">
+    <h2>Meet Kriva</h2>
+    <p>Our little Valentine 🌹</p>
+    <div class="divider"></div>
+  </div>
+  <div class="about-content fade-in">
+    <p>Born on the most romantic day of the year — February 14, 2025 — Kriva came into this world as a Valentine's gift that no one could have imagined. A tiny miracle in Dubai, surrounded by the warmth of the desert sun and a whole lot of love.</p>
+    <div class="highlight">"Raising our Valentine 🌹 Not fast. Not perfect. Just present. Screen-free parenting & real moments 🤍"</div>
+    <p>Kriva's world is beautifully intentional. Mama Mamta and Papa believe in screen-free parenting, slow mornings, and capturing the magic of real, unfiltered moments. From Bollywood dance sessions to exploring Dubai's vibrant city life, every day is an adventure seen through the eyes of wonder.</p>
+    <p>This isn't a highlight reel — it's a love letter. A collection of first smiles, wobbly steps, messy meals, and the quiet joy of just being present with the tiniest human who changed everything.</p>
+    <div class="about-tags">
+      <span>🏙️ Dubai, UAE</span>
+      <span>📵 Screen-Free</span>
+      <span>🌅 Slow Mornings</span>
+      <span>💃 Bollywood Energy</span>
+      <span>✈️ Travel Baby</span>
+      <span>🤍 Real Moments</span>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES -->
+<section class="timeline-section" id="milestones">
+  <div class="section-title fade-in">
+    <h2>The First Year</h2>
+    <p>365 days of tiny miracles</p>
+    <div class="divider"></div>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item fade-in">
+      <span class="emoji">🌹</span>
+      <div class="date">February 14, 2025</div>
+      <h3>Hello, World!</h3>
+      <p>Born on Valentine's Day in Dubai — the greatest love story began. A tiny Valentine wrapped in the softest blanket, stealing hearts from minute one.</p>
+    </div>
+    <div class="timeline-item fade-in">
+      <span class="emoji">😊</span>
+      <div class="date">April 2025</div>
+      <h3>First Smile</h3>
+      <p>That toothless gummy grin that made every sleepless night worth it. The kind of smile that could light up all of Dubai Marina.</p>
+    </div>
+    <div class="timeline-item fade-in">
+      <span class="emoji">🍼</span>
+      <div class="date">June 2025</div>
+      <h3>First Taste of Food</h3>
+      <p>The confused face, the messy bib, the tiny tongue figuring it all out. Spoiler: she loved it. (Mostly.)</p>
+    </div>
+    <div class="timeline-item fade-in">
+      <span class="emoji">🐛</span>
+      <div class="date">August 2025</div>
+      <h3>First Crawl</h3>
+      <p>Suddenly, nothing was safe. The world got a lot bigger — and baby-proofing became a full-time job.</p>
+    </div>
+    <div class="timeline-item fade-in">
+      <span class="emoji">🗣️</span>
+      <div class="date">October 2025</div>
+      <h3>First Word</h3>
+      <p>"Mama" — or was it "Papa"? Either way, the whole house cried. (Okay, just the parents.)</p>
+    </div>
+    <div class="timeline-item fade-in">
+      <span class="emoji">🚶‍♀️</span>
+      <div class="date">December 2025</div>
+      <h3>First Steps</h3>
+      <p>Wobbly, brave, and unstoppable. Three steps, a tumble, and right back up again. A metaphor for life, honestly.</p>
+    </div>
+    <div class="timeline-item fade-in">
+      <span class="emoji">🎂</span>
+      <div class="date">February 14, 2026</div>
+      <h3>Turning One!</h3>
+      <p>365 days of love, laughter, learning, and more joy than we ever thought possible. Happy first birthday, our little Valentine! 🌹</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+  <div class="section-title fade-in">
+    <h2>Moments</h2>
+    <p>A glimpse into Kriva's world</p>
+    <div class="divider"></div>
+  </div>
+  <div class="gallery-grid fade-in">
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/krivabymamta/p/DUv07ark8O6_qLpWGGEoXhsnHQki_wrzZi7oTw0/" data-instgrm-version="14"><a href="https://www.instagram.com/krivabymamta/p/DUv07ark8O6_qLpWGGEoXhsnHQki_wrzZi7oTw0/">View on Instagram</a></blockquote>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/krivabymamta/p/DUtTFJkE3-C76ZuVvK-zBh_XcEzpopXNW6XTsc0/" data-instgrm-version="14"><a href="https://www.instagram.com/krivabymamta/p/DUtTFJkE3-C76ZuVvK-zBh_XcEzpopXNW6XTsc0/">View on Instagram</a></blockquote>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/krivabymamta/reel/DR9ezqWDXoa/" data-instgrm-version="14"><a href="https://www.instagram.com/krivabymamta/reel/DR9ezqWDXoa/">View on Instagram</a></blockquote>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/krivabymamta/reel/DQYm0D0ja10/" data-instgrm-version="14"><a href="https://www.instagram.com/krivabymamta/reel/DQYm0D0ja10/">View on Instagram</a></blockquote>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/krivabymamta/reel/DUfAPhrCLlf/" data-instgrm-version="14"><a href="https://www.instagram.com/krivabymamta/reel/DUfAPhrCLlf/">View on Instagram</a></blockquote>
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/krivabymamta/reel/DUceJ1kDCHQ/" data-instgrm-version="14"><a href="https://www.instagram.com/krivabymamta/reel/DUceJ1kDCHQ/">View on Instagram</a></blockquote>
+  </div>
+</section>
+
+<!-- STATS / MEDIA KIT -->
+<section class="stats-section" id="stats">
+  <div class="section-title fade-in">
+    <h2>Media Kit</h2>
+    <p>@krivabymamta · Verified ✅</p>
+    <div class="divider"></div>
+  </div>
+  <div class="stats-grid fade-in">
+    <div class="stat-card">
+      <div class="number">631</div>
+      <div class="label">Followers</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">123</div>
+      <div class="label">Posts</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">151</div>
+      <div class="label">Following</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">~5%</div>
+      <div class="label">Engagement Rate</div>
+    </div>
+  </div>
+  <div class="audience-info fade-in">
+    <div class="audience-card">
+      <h4>🎯 Audience</h4>
+      <ul>
+        <li>👩 Women aged 25–35</li>
+        <li>🇮🇳 Indian parents</li>
+        <li>🇦🇪 UAE-based families</li>
+        <li>👶 New & expecting parents</li>
+      </ul>
+    </div>
+    <div class="audience-card">
+      <h4>📂 Content Categories</h4>
+      <ul>
+        <li>📵 Screen-free parenting</li>
+        <li>🌅 Slow mornings & routines</li>
+        <li>💃 Bollywood energy & fun</li>
+        <li>🏙️ Dubai city life & travel</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- COLLABS -->
+<section class="collabs" id="collabs">
+  <div class="section-title fade-in">
+    <h2>Work with Kriva</h2>
+    <p>Brand collaboration opportunities</p>
+    <div class="divider"></div>
+  </div>
+  <div class="collab-grid fade-in">
+    <div class="collab-card">
+      <div class="icon">🍼</div>
+      <h3>Baby Products</h3>
+      <p>Feeding, skincare, essentials — the everyday magic of parenting</p>
+    </div>
+    <div class="collab-card">
+      <div class="icon">👗</div>
+      <h3>Kids Fashion</h3>
+      <p>Adorable outfits styled with Dubai flair and desi charm</p>
+    </div>
+    <div class="collab-card">
+      <div class="icon">🧸</div>
+      <h3>Toys & Learning</h3>
+      <p>Screen-free play, Montessori, sensory toys — all about real engagement</p>
+    </div>
+    <div class="collab-card">
+      <div class="icon">🌿</div>
+      <h3>Organic & Natural</h3>
+      <p>Clean, safe, and natural products for the conscious parent</p>
+    </div>
+    <div class="collab-card">
+      <div class="icon">✈️</div>
+      <h3>Travel & Lifestyle</h3>
+      <p>Family-friendly travel, hotels, airlines, and experiences</p>
+    </div>
+    <div class="collab-card">
+      <div class="icon">🏠</div>
+      <h3>Home & Nursery</h3>
+      <p>Baby-proofing, décor, nursery setups — making home beautiful</p>
+    </div>
+  </div>
+  <div class="offerings fade-in">
+    <h3>What We Offer</h3>
+    <div class="offering-tags">
+      <span>📱 Instagram Reels</span>
+      <span>📸 Feed Posts</span>
+      <span>🎬 Stories</span>
+      <span>📦 Unboxing</span>
+      <span>✍️ Reviews</span>
+      <span>🤝 Long-term Partnerships</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-title fade-in">
+    <h2>Let's Connect</h2>
+    <p>For brand inquiries and collaborations</p>
+    <div class="divider"></div>
+  </div>
+  <div class="contact-box fade-in">
+    <p>We'd love to hear from brands that align with our values — screen-free, intentional, and full of love. Let's create something beautiful together for Kriva's community.</p>
+    <a href="mailto:mamtanegi182@gmail.com?subject=Brand%20Collaboration%20—%20@krivabymamta" class="contact-btn">📩 Get in Touch</a>
+    <div class="contact-social">
+      <a href="https://instagram.com/krivabymamta" target="_blank" rel="noopener">📷 @krivabymamta</a>
+      <a href="https://instagram.com/mamtanegi182" target="_blank" rel="noopener">👩 @mamtanegi182</a>
+      <a href="https://instagram.com/the_flying_hippie" target="_blank" rel="noopener">👨 @the_flying_hippie</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Made with <span class="heart">❤️</span> for our Valentine</p>
+  <p style="margin-top:.5rem"><a href="https://instagram.com/krivabymamta" target="_blank" rel="noopener">@krivabymamta</a> · Dubai, UAE 🇦🇪</p>
+  <p style="margin-top:.3rem;opacity:.5;font-size:.75rem">© 2026 Raising Kriva. All rights reserved.</p>
+</footer>
+
+<!-- INSTAGRAM EMBED SCRIPT -->
+<script async src="https://www.instagram.com/embed.js"></script>
+
+<script>
+// NAV SCROLL EFFECT
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)});
+
+// CLOSE MOBILE NAV ON LINK CLICK
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav ul').classList.remove('open')));
+
+// FADE-IN ON SCROLL
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.15});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+// CONFETTI
+(function(){
+  const canvas=document.getElementById('confetti-canvas');
+  const ctx=canvas.getContext('2d');
+  let W,H;
+  function resize(){W=canvas.width=canvas.parentElement.offsetWidth;H=canvas.height=canvas.parentElement.offsetHeight}
+  resize();window.addEventListener('resize',resize);
+  const colors=['#e8a0b4','#d4a853','#f0dba8','#c76b8a','#f9e4e0','#ff6b9d'];
+  const pieces=[];
+  for(let i=0;i<60;i++){
+    pieces.push({x:Math.random()*W,y:Math.random()*H-H,w:Math.random()*8+4,h:Math.random()*6+3,
+      color:colors[Math.floor(Math.random()*colors.length)],
+      dx:Math.random()*2-1,dy:Math.random()*1.5+.5,rot:Math.random()*360,dr:Math.random()*4-2,
+      opacity:Math.random()*.6+.3});
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pieces.forEach(p=>{
+      ctx.save();ctx.globalAlpha=p.opacity;ctx.translate(p.x,p.y);ctx.rotate(p.rot*Math.PI/180);
+      ctx.fillStyle=p.color;ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);ctx.restore();
+      p.x+=p.dx;p.y+=p.dy;p.rot+=p.dr;
+      if(p.y>H+20){p.y=-20;p.x=Math.random()*W}
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
